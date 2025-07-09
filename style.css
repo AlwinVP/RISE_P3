@@ -1,0 +1,95 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  font-size: 2.2em;
+  color: #003366;
+}
+
+header p {
+  color: #555;
+}
+
+form, #preview {
+  background: #fff;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideUp 1s ease;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #003366;
+  box-shadow: 0 0 5px rgba(0, 51, 102, 0.3);
+}
+
+.main-btn, .small-btn {
+  padding: 10px 20px;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.main-btn:hover, .small-btn:hover {
+  background: #0055aa;
+}
+
+#resumeOutput {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#resumeOutput img {
+  max-width: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+#resumeOutput h3, #resumeOutput h4 {
+  color: #003366;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

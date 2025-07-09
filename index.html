@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Resume Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 Digital Resume Builder</h1>
+      <p>Build your professional resume in minutes</p>
+    </header>
+
+    <form id="resumeForm">
+      <section>
+        <h2>👤 Personal Details</h2>
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Phone" required />
+        <input type="file" id="photo" accept="image/*" />
+      </section>
+
+      <section>
+        <h2>🎓 Education</h2>
+        <input type="text" id="edu10" placeholder="10th School Name" required />
+        <input type="text" id="edu12" placeholder="12th School Name" required />
+        <input type="text" id="eduDegree" placeholder="Degree College Name" required />
+      </section>
+
+      <section>
+        <h2>💼 Job Experience</h2>
+        <div id="experienceContainer">
+          <input type="text" class="experience" placeholder="Job Title @ Company" required />
+        </div>
+        <button type="button" class="small-btn" onclick="addExperience()">Add More Experience</button>
+      </section>
+
+      <section>
+        <h2>📌 Projects</h2>
+        <div id="projectsContainer">
+          <input type="text" class="project" placeholder="Project Name" required />
+        </div>
+        <button type="button" class="small-btn" onclick="addProject()">Add More Project</button>
+      </section>
+
+      <section>
+        <h2>🎨 Hobbies</h2>
+        <textarea id="hobbies" placeholder="Your hobbies" required></textarea>
+      </section>
+
+      <button type="button" class="main-btn" onclick="generatePDF()">🎯 Download PDF</button>
+    </form>
+
+    <div id="preview">
+      <h2>📄 Resume Preview</h2>
+      <div id="resumeOutput"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
